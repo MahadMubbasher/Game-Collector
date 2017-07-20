@@ -1,14 +1,19 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="7Fx-WH-JPP">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="BYZ-38-t0r" customClass="ViewController" customModule="Game_Collector" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +21,118 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="eD9-Br-CkW">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="eD9-Br-CkW" secondAttribute="bottom" id="BX3-Ra-lLO"/>
+                            <constraint firstItem="eD9-Br-CkW" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="bqI-jX-uZ1"/>
+                            <constraint firstAttribute="trailing" secondItem="eD9-Br-CkW" secondAttribute="trailing" id="vD0-de-XHG"/>
+                            <constraint firstItem="eD9-Br-CkW" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="vLF-J7-BLX"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="izs-T7-k1c">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="rgr-8X-7bG">
+                            <connections>
+                                <segue destination="Max-mY-WpI" kind="show" id="Lgv-X2-VTD"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1076" y="138.98050974512745"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="qLf-92-igf">
+            <objects>
+                <viewController id="Max-mY-WpI" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Rxd-ll-PSV"/>
+                        <viewControllerLayoutGuide type="bottom" id="LCb-zR-Koy"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="6Ql-ww-aLr">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Horizon_Zero_Dawn.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="xbs-fx-WX0">
+                                <rect key="frame" x="62" y="163" width="250" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="250" id="0YN-Zk-D0r"/>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="150" id="5qd-pv-fhl"/>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="150" id="7Q4-mx-20O"/>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="150" id="9hH-od-dBv"/>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="150" id="QDR-QO-z7c"/>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="150" id="YQE-Dj-XV6"/>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="200" id="Z1U-NT-wri"/>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="200" id="cFw-8g-0Bq"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="150" id="eSv-8m-ZTJ"/>
+                                    <constraint firstAttribute="height" constant="75" id="fr6-fj-8p0"/>
+                                    <constraint firstAttribute="width" constant="100" id="ft1-T6-sUc"/>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="200" id="lEv-lG-kSr"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="y7X-U3-rMg"/>
+                                </constraints>
+                            </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lhN-AB-BzP">
+                                <rect key="frame" x="62" y="346" width="250" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rkh-xF-iMk">
+                                <rect key="frame" x="172" y="430" width="30" height="42"/>
+                                <state key="normal" title="Add"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="xbs-fx-WX0" firstAttribute="centerX" secondItem="6Ql-ww-aLr" secondAttribute="centerX" id="0OC-jg-5fu"/>
+                            <constraint firstItem="lhN-AB-BzP" firstAttribute="centerX" secondItem="6Ql-ww-aLr" secondAttribute="centerX" id="1gE-cG-I6a"/>
+                            <constraint firstItem="rkh-xF-iMk" firstAttribute="top" secondItem="lhN-AB-BzP" secondAttribute="bottom" constant="54" id="4Gm-ds-UZo"/>
+                            <constraint firstItem="lhN-AB-BzP" firstAttribute="width" secondItem="xbs-fx-WX0" secondAttribute="width" id="N9m-F2-XTO"/>
+                            <constraint firstItem="xbs-fx-WX0" firstAttribute="centerX" secondItem="6Ql-ww-aLr" secondAttribute="centerX" id="Vbt-9J-kSK"/>
+                            <constraint firstItem="rkh-xF-iMk" firstAttribute="centerX" secondItem="6Ql-ww-aLr" secondAttribute="centerX" id="hTk-w4-kDx"/>
+                            <constraint firstItem="rkh-xF-iMk" firstAttribute="top" secondItem="lhN-AB-BzP" secondAttribute="bottom" constant="31" id="hev-Gd-o3r"/>
+                            <constraint firstItem="lhN-AB-BzP" firstAttribute="width" secondItem="xbs-fx-WX0" secondAttribute="width" id="k1r-xI-zXs"/>
+                            <constraint firstItem="lhN-AB-BzP" firstAttribute="top" secondItem="xbs-fx-WX0" secondAttribute="bottom" constant="46" id="ozm-Up-ys4"/>
+                            <constraint firstItem="xbs-fx-WX0" firstAttribute="top" secondItem="Rxd-ll-PSV" secondAttribute="bottom" constant="100" id="sev-Q0-LfO"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="YeC-W5-PLu">
+                        <rightBarButtonItems>
+                            <barButtonItem systemItem="camera" id="eef-mM-K6G"/>
+                            <barButtonItem title="Photos" id="9kY-M6-AS6"/>
+                        </rightBarButtonItems>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Jrm-Qv-WiT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1760.8" y="138.98050974512745"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="wQo-pm-p2b">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="7Fx-WH-JPP" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="pnu-ls-AFn">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="kzx-ly-GVv"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZfP-IL-EdY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="181.59999999999999" y="-534.78260869565224"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Horizon_Zero_Dawn.jpg" width="250" height="275"/>
+    </resources>
 </document>
